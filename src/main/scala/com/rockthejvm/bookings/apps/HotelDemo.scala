@@ -1,13 +1,12 @@
-package com.rockthejvm.bookings.playground
+package com.rockthejvm.bookings.apps
 
 import akka.actor.typed.ActorSystem
 
 import java.sql.Date
 import scala.concurrent.duration._
-
 import akka.actor.typed.scaladsl.Behaviors
 import com.rockthejvm.bookings.actor.Hotel
-import com.rockthejvm.bookings.model.MakeReservation
+import com.rockthejvm.bookings.model.{CancelReservation, ChangeReservation, MakeReservation}
 
 object HotelDemo {
   def main(args: Array[String]): Unit = {
@@ -20,7 +19,9 @@ object HotelDemo {
       val logger = ctx.spawn(simpleLogger, "logger")
       val hotel = ctx.spawn(Hotel("testHotel"), "testHotel")
 
-      hotel ! MakeReservation("max", Date.valueOf("2024-01-16"), Date.valueOf("2024-01-25"), 101, logger) // Reply to is simple logger
+//      hotel ! MakeReservation("max", Date.valueOf("2024-01-16"), Date.valueOf("2024-01-25"), 101, logger) // Reply to is simple logger
+//      hotel ! ChangeReservation("9AAFGHKDPQ", Date.valueOf("2024-01-17"), Date.valueOf("2024-01-26"), 101, logger)
+//      hotel ! CancelReservation("9AAFGHKDPQ", logger)
       Behaviors.empty
     }
 
