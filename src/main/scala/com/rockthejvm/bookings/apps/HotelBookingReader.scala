@@ -21,6 +21,9 @@ object HotelBookingReader {
   val consumtionSink = Sink.foreach(println)
   val connectedGraph = persistenceIds.to(consumtionSink)
 
+  def makeReservation(reservation: Reservation) = {
+
+  }
   // Read journal can also fetch all the events for a persistence ID
   val eventsForTestHotel = readJournal
     .eventsByPersistenceId("testHotel", 0, Long.MaxValue)

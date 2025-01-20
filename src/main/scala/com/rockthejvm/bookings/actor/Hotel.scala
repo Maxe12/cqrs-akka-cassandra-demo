@@ -72,8 +72,6 @@ object Hotel {
         val newState = state.copy(reservations = state.reservations - deletedReservation)
         println(s"state changed: $newState")
         newState
-      case _ =>
-        state // TODO
     }
 
   // Allows object to be invocted as function

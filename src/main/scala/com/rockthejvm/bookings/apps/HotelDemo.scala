@@ -20,8 +20,8 @@ object HotelDemo {
       val hotel = ctx.spawn(Hotel("testHotel"), "testHotel")
 
 //      hotel ! MakeReservation("max", Date.valueOf("2024-01-16"), Date.valueOf("2024-01-25"), 101, logger) // Reply to is simple logger
-//      hotel ! ChangeReservation("9AAFGHKDPQ", Date.valueOf("2024-01-17"), Date.valueOf("2024-01-26"), 101, logger)
-//      hotel ! CancelReservation("9AAFGHKDPQ", logger)
+//      hotel ! ChangeReservation("EVQUSUKHK1", Date.valueOf("2024-01-17"), Date.valueOf("2024-01-26"), 101, logger)
+//      hotel ! CancelReservation("EVQUSUKHK1", logger)
       Behaviors.empty
     }
 
